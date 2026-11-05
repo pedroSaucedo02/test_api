@@ -39,19 +39,19 @@ public interface TaskRepository extends JpaRepository<Task, Long> {
 } */
 
 
-package tarefas02.api.repositories;
+    package tarefas02.api.repositories;
 
-import java.util.List;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-import tarefas02.api.models.Task;
-import tarefas02.api.models.projections.TaskProjection;
-
-@Repository
-public interface TaskRepository extends JpaRepository<Task, Long> {
-
-    // Consulta derivada do Spring Data JPA para buscar todas as tarefas do usuário pelo ID
-    List<TaskProjection> findByUser_Id(Long id);
-}
+    import java.util.List;
+    
+    import org.springframework.data.jpa.repository.JpaRepository;
+    import org.springframework.stereotype.Repository;
+    
+    import tarefas02.api.models.Task;
+    import tarefas02.api.models.projections.TaskProjection;
+    
+    @Repository
+    public interface TaskRepository extends JpaRepository<Task, Long> {
+    
+        // Consulta derivada do Spring Data JPA para buscar todas as tarefas do usuário pelo ID
+        List<TaskProjection> findByUser_Id(Long id);
+    }
